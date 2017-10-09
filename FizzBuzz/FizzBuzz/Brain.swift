@@ -10,6 +10,8 @@ import Foundation
 
 class Brain {
     
+    // MARK: - Functions
+    
     func isDivisibleBy(divisor: Int, number: Int) -> Bool {
         return number % divisor == 0
     }
@@ -25,16 +27,16 @@ class Brain {
         return isDivisibleBy(divisor: 15, number: number)
     }
     
-    func check(number: Int) -> String {
+    func check(number: Int) -> Move {
         switch true {
         case isDivisibleByFifteen(number: number):
-            return "FizzBuzz"
+            return Move.FizzBuzz
         case isDivisibleByThree(number: number):
-            return "Fizz"
+            return Move.Fizz
         case isDivisibleByFive(number: number):
-            return "Buzz"
+            return Move.Buzz
         default:
-            return "\(number)"
+            return Move.Number
         }
     }
     

@@ -13,7 +13,11 @@ import XCTest
 
 class BrainTests: XCTestCase {
     
+    // MARK: - Variables
+    
     let brain = Brain()
+    
+    // MARK: - Setup/TearDown
     
     override func setUp() {
         super.setUp()
@@ -25,7 +29,7 @@ class BrainTests: XCTestCase {
         super.tearDown()
     }
     
-    //MARK: - Tests
+    // MARK: - Tests
     
     func testIsDivisibleByThree() {
         let result = brain.isDivisibleByThree(number: 3)
@@ -59,22 +63,22 @@ class BrainTests: XCTestCase {
     
     func testSaysFizz() {
         let result = brain.check(number: 3)
-        XCTAssertEqual(result, "Fizz")
+        XCTAssertEqual(result, Move.Fizz )
     }
     
     func testSayBuzz() {
         let result = brain.check(number: 5)
-        XCTAssertEqual(result, "Buzz")
+        XCTAssertEqual(result, Move.Buzz)
     }
     
     func testSaysFizzBuzz() {
         let result = brain.check(number: 15)
-        XCTAssertEqual(result, "FizzBuzz")
+        XCTAssertEqual(result, Move.FizzBuzz)
     }
     
     func testSayNmber() {
         let result = brain.check(number: 1)
-        XCTAssertEqual(result, "1")
+        XCTAssertEqual(result, Move.Number)
     }
     
 }
