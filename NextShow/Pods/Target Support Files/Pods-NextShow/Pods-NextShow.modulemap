@@ -1,0 +1,6 @@
+framework module Pods_NextShow {
+  umbrella header "Pods-NextShow-umbrella.h"
+
+  export *
+  module * { export * }
+}
