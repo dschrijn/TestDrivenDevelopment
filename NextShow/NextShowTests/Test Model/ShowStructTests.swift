@@ -31,4 +31,32 @@ class ShowStructTests: XCTestCase {
         XCTAssertEqual(show.releaseDate, "11/16/2017")
     }
     
+    func testShowsAreEqual_ShouldReturnTrue() {
+        let showOne = Show(title: "Action")
+        let showTwo = Show(title: "Action")
+        XCTAssertEqual(showOne, showTwo)
+    }
+    
+    func testIfShowTitlesAreDifferent_ShouldReturnNotEqual() {
+        let showOne = Show(title: "Action")
+        let showTwo = Show(title: "Horror")
+        
+        XCTAssertNotEqual(showOne, showTwo)
+    }
+    
+    func testIfShowReleaseDatesAreDifferent_ShouldReturnNotEqual() {
+        let showOne = Show(title: "SyFy", releaseDate: "11/11/2017")
+        let showTwo = Show(title: "SyFy", releaseDate: "11/12/2017")
+        
+        XCTAssertNotEqual(showOne.releaseDate, showTwo.releaseDate)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

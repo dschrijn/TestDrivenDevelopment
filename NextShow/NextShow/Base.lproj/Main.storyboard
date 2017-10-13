@@ -15,17 +15,55 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Main View Controller-->
+        <!--Show Library View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="NextShow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShowLibraryVC" id="BYZ-38-t0r" customClass="ShowLibraryViewController" customModule="NextShow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpj-4I-krI" customClass="DropShadowView" customModule="NextShow" customModuleProvider="target">
                                 <rect key="frame" x="16" y="114" width="343" height="490"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x1o-sC-qSz">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="490"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="showCellID" textLabel="iaW-bx-luV" detailTextLabel="gMg-2H-Myd" style="IBUITableViewCellStyleSubtitle" id="I4s-3Z-YaO" customClass="ShowCell" customModule="NextShow" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I4s-3Z-YaO" id="L4A-GH-g2I">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iaW-bx-luV">
+                                                            <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gMg-2H-Myd">
+                                                            <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="x1o-sC-qSz" secondAttribute="trailing" id="5Hw-Qb-4dE"/>
+                                    <constraint firstItem="x1o-sC-qSz" firstAttribute="top" secondItem="Vpj-4I-krI" secondAttribute="top" id="C8n-xj-Vka"/>
+                                    <constraint firstItem="x1o-sC-qSz" firstAttribute="leading" secondItem="Vpj-4I-krI" secondAttribute="leading" id="PhT-cP-Izl"/>
+                                    <constraint firstAttribute="bottom" secondItem="x1o-sC-qSz" secondAttribute="bottom" id="aNs-q9-x48"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                         <real key="value" value="2"/>
@@ -56,10 +94,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="dataService" destination="Rag-cV-a88" id="v3S-Ac-bJ4"/>
+                        <outlet property="showTableView" destination="x1o-sC-qSz" id="ICs-Rc-JBx"/>
                         <outlet property="titleLabel" destination="Aky-qg-Ibf" id="nkI-XU-lJg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="Rag-cV-a88" userLabel="ShowLibraryDataService" customClass="ShowLibraryDataService" customModule="NextShow" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
         </scene>
