@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MXH-Mv-0M5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,10 +24,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vpj-4I-krI" customClass="DropShadowView" customModule="NextShow" customModuleProvider="target">
-                                <rect key="frame" x="16" y="114" width="343" height="490"/>
+                                <rect key="frame" x="16" y="126" width="343" height="485"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x1o-sC-qSz">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="490"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="446"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="showCellID" textLabel="iaW-bx-luV" detailTextLabel="gMg-2H-Myd" style="IBUITableViewCellStyleSubtitle" id="I4s-3Z-YaO" customClass="ShowCell" customModule="NextShow" customModuleProvider="target">
@@ -62,7 +62,7 @@
                                     <constraint firstAttribute="trailing" secondItem="x1o-sC-qSz" secondAttribute="trailing" id="5Hw-Qb-4dE"/>
                                     <constraint firstItem="x1o-sC-qSz" firstAttribute="top" secondItem="Vpj-4I-krI" secondAttribute="top" id="C8n-xj-Vka"/>
                                     <constraint firstItem="x1o-sC-qSz" firstAttribute="leading" secondItem="Vpj-4I-krI" secondAttribute="leading" id="PhT-cP-Izl"/>
-                                    <constraint firstAttribute="bottom" secondItem="x1o-sC-qSz" secondAttribute="bottom" id="aNs-q9-x48"/>
+                                    <constraint firstAttribute="bottom" secondItem="x1o-sC-qSz" secondAttribute="bottom" constant="39" id="aNs-q9-x48"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
@@ -73,26 +73,32 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NextShow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aky-qg-Ibf">
-                                <rect key="frame" x="104" y="19" width="166" height="87"/>
-                                <fontDescription key="fontDescription" name="Cochin-BoldItalic" family="Cochin" pointSize="37"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.86181392769999998" green="0.86181392769999998" blue="0.86181392769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Aky-qg-Ibf" firstAttribute="centerX" secondItem="Vpj-4I-krI" secondAttribute="centerX" id="AOw-vK-uQD"/>
-                            <constraint firstItem="Vpj-4I-krI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="94" id="ImL-SD-gvy"/>
-                            <constraint firstItem="Aky-qg-Ibf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-1" id="KsM-hc-Yk1"/>
+                            <constraint firstItem="Vpj-4I-krI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="ImL-SD-gvy"/>
                             <constraint firstItem="Vpj-4I-krI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="P7e-aD-PMP"/>
-                            <constraint firstItem="Aky-qg-Ibf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="ZEY-Qq-gIf"/>
                             <constraint firstItem="Vpj-4I-krI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hYM-sk-JNg"/>
-                            <constraint firstAttribute="bottom" secondItem="Vpj-4I-krI" secondAttribute="bottom" constant="63" id="uVt-Oc-WAg"/>
-                            <constraint firstItem="Vpj-4I-krI" firstAttribute="top" secondItem="Aky-qg-Ibf" secondAttribute="bottom" constant="8" symbolic="YES" id="xfu-fe-OG1"/>
+                            <constraint firstAttribute="bottom" secondItem="Vpj-4I-krI" secondAttribute="bottom" constant="56" id="uVt-Oc-WAg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="KXz-Tj-aMk">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="aya-7a-AG6">
+                            <rect key="frame" x="101.5" y="2" width="172" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NextShow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aky-qg-Ibf">
+                                    <rect key="frame" x="13" y="-1" width="151" height="43"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="Cochin-BoldItalic" family="Cochin" pointSize="37"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </view>
+                    </navigationItem>
                     <connections>
                         <outlet property="dataService" destination="Rag-cV-a88" id="v3S-Ac-bJ4"/>
                         <outlet property="showTableView" destination="x1o-sC-qSz" id="ICs-Rc-JBx"/>
@@ -102,7 +108,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="Rag-cV-a88" userLabel="ShowLibraryDataService" customClass="ShowLibraryDataService" customModule="NextShow" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+            <point key="canvasLocation" x="372" y="32.833583208395808"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fn2-QH-BG2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MXH-Mv-0M5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8e4-nl-m68">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wB8-bR-pZX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H6X-zR-Koq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-406" y="33"/>
         </scene>
     </scenes>
 </document>
