@@ -1,9 +1,9 @@
 # NextShow
---
+-- 
 
 An iOS app demonstrating "Test Driven Development".
 
-![](https://github.com/dschrijn/TestDrivenDevelopment/blob/master/NextShow/images/nextShow1.PNG) ![](https://github.com/dschrijn/TestDrivenDevelopment/blob/master/NextShow/images/nextShow2.PNG)
+<img src="https://github.com/dschrijn/TestDrivenDevelopment/blob/master/NextShow/images/nextShow1.PNG" width="180" height="300"> <img src="https://github.com/dschrijn/TestDrivenDevelopment/blob/master/NextShow/images/nextShow2.PNG" width="180" height="300">
 
 
 ### Overview:
