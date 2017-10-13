@@ -2,6 +2,7 @@
 
 An iOS FizzBuzz game.
 
+<img src="https://github.com/dschrijn/TestDrivenDevelopment/blob/master/FizzBuzz/images/number.PNG" width="180" height="300"> <img src="https://github.com/dschrijn/TestDrivenDevelopment/blob/master/FizzBuzz/images/fizz.PNG" width="180" height="300"> <img src="https://github.com/dschrijn/TestDrivenDevelopment/blob/master/FizzBuzz/images/buzz.PNG" width="180" height="300"> <img src="https://github.com/dschrijn/TestDrivenDevelopment/blob/master/FizzBuzz/images/fizzbuzz.PNG" width="180" height="300">
 
 ### Overview:
 
